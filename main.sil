@@ -7,9 +7,19 @@
 \define[command=pre-key]{\textbf{\process{}:}}
 
 \tableofcontents
-% \pagebreak
+\indent
 
-\section{Headware}
+\subsection{Audição}
+
+\begin[pre-key = pre-key, post-key = medskip]{sorted}
+
+\begin[key = Ouvidos Modulares]{item}
+  Você pode desconectar seus ouvidos de sua cabeça, e elas continuam a transmitir o que ouvem para você os barulhos que capturam. Você pode ter cada ouvido em um lugar diferente e alternar de qual deles você está recebendo a transmissão de áudio. Se não estiver com nenhum ouvido conectado à sua cabeça, você perde totalmente seu senso de equilíbrio e não consegue sequer andar, tendo que ficar sentado ou imóvel até recuperar pelo menos um ouvido.
+\end{item}
+
+\end{sorted}
+
+\subsection{Visão}
 
 \begin[pre-key = pre-key, post-key = medskip]{sorted}
 
@@ -25,7 +35,7 @@
   Receptores de radiação infravermelha em seus olhos te permitem enxergar objetos emanando calor, em tons de roxo e vermelho.
 \end{item}
 
-\begin[key = Olhos Desmontáveis]{item}
+\begin[key = Olhos Modulares]{item}
   Você pode desconectar os seus olhos da sua cavidade ocular, e eles continuam a transmitir para você as imagens que capturam. Você pode estar com cada olho em um local e alternar qual das imagens você está recebendo, apesar de ficar com uma noção de profundidade reduzida.
 \end{item}
 
@@ -35,7 +45,7 @@
 
 \end{sorted}
 
-\section{Outros}
+\subsection{Outros}
 
 \begin[pre-key = pre-key, post-key = medskip]{sorted}
 
