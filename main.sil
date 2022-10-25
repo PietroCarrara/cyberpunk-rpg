@@ -1,0 +1,64 @@
+\begin[class=class]{document}
+
+\use[module=packages.lists]
+
+\language[main=pt]
+
+\define[command=pre-key]{\textbf{\process{}:}}
+
+\tableofcontents
+% \pagebreak
+
+\section{Headware}
+
+\begin[pre-key = pre-key, post-key = medskip]{sorted}
+
+\begin[key = Duplicação de Retina]{item}
+  Seus olhos podem escanear uma retina e replicá-la. Útil para sistemas de segurança que usam autenticação por retina. Você também pode enviar dados de alguma retina para que eles a repliquem, sem depender do scanner embutido.
+\end{item}
+
+\begin[key = Gravador]{item}
+  Seus olhos vêm equipados com câmeras que captam, armazenam e transmitem o que você está vendo. Modificação comum em cineastas amadores.
+\end{item}
+
+\begin[key = Visão de Calor]{item}
+  Receptores de radiação infravermelha em seus olhos te permitem enxergar objetos emanando calor, em tons de roxo e vermelho.
+\end{item}
+
+\begin[key = Olhos Desmontáveis]{item}
+  Você pode desconectar os seus olhos da sua cavidade ocular, e eles continuam a transmitir para você as imagens que capturam. Você pode estar com cada olho em um local e alternar qual das imagens você está recebendo, apesar de ficar com uma noção de profundidade reduzida.
+\end{item}
+
+\begin[key = Aumento de Magnitude]{item}
+  Sua visão pode aumentar seu fator de zoom para até 100x. Você pode perceber a olho nu falhas milimétricas na lapidação de uma joia, ou ler lábios refletidos na retina de alguém conversando do outro lado da rua.
+\end{item}
+
+\end{sorted}
+
+\section{Outros}
+
+\begin[pre-key = pre-key, post-key = medskip]{sorted}
+
+\begin[key = Reflexos Implantados]{item}
+  Quando \textbf{algum aliado rolar um 6-}, você pode descrever como tenta evitar que o teste falhe e perder 12 - o resultado da rolagem PVs. Se o fizer, role+CON. Com 10+, as consequências dessa falha são evitadas. Com 7-9, faça como 10+, mas escolha 1:
+  \begin{itemize}
+    \item{Você recebe -2 em seu próximo teste.}
+    \item{Seu aliado recebe -2 em seu próximo teste.}
+  \end{itemize}
+  \noindent{Com 6-, você se expõe as consequências ou piora a situação. Caso seja salvo, o aliado não marca XP pela falha que ativou esse movimento.}
+\end{item}
+
+\begin[key = Velocidade Biônica]{item}
+  Quando \textbf{tentar correr a velocidades sobre-humanas}, role+DES. Com 7-9, você alcança seu objetivo. Com 10+, você também escolhe um:
+  \begin{itemize}
+    \item{Você foi discreto ao correr: seus alvos não o notam se aproximando.}
+    \item{Você consegue pular e agarrar um alvo, derrubando-o.}
+    \item{Você ultrapassa seu alvo.}
+  \end{itemize}
+\end{item}
+
+\end{sorted}
+
+% \showframe[id=all]
+
+\end{document}
