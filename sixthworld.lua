@@ -59,6 +59,12 @@ function class:_init(options)
   self:loadPackage('tableofcontents')
   self:loadPackage('textcase')
   self:loadPackage('rules')
+  self:loadPackage("footnotes", {
+    insertInto = "footnotes",
+    stealFrom = { "content", "content_2", "divide" }
+  })
+
+
   self:loadPackage('sorted')
 
   SILE.call('font', font(cooper('Medium'), '9pt'))

@@ -1,4 +1,4 @@
-\begin[class=class]{document}
+\begin[class=sixthworld]{document}
 
 \use[module=packages.lists]
 
@@ -45,6 +45,14 @@
   Sua visão pode aumentar seu fator de zoom para até 100x. Você pode perceber a olho nu falhas milimétricas na lapidação de uma joia, ou ler lábios refletidos na retina de alguém conversando do outro lado da rua.
 \end{item}
 
+\begin[key = Aim Assist]{item}
+  Quando \textbf{Disparar em algum alvo}, com 7-9 você pode escolher outras opções:
+  \begin{itemize}
+    \item{Cause -1d4 de dano.}
+    \item{Re-role o teste com -1. Você não pode usar esta aug durante a re-rolagem.}
+  \end{itemize}
+\end{item}
+
 \end{sorted}
 
 \subsection{Outros}
@@ -71,6 +79,6 @@
 
 \end{sorted}
 
-\showframe[id=all]
+% \showframe[id=all]
 
 \end{document}

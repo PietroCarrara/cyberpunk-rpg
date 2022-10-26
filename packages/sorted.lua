@@ -21,6 +21,10 @@ function package:registerCommands()
   self:registerCommand("sort", function (options, content)
     local sep = options.sep or ', '
 
+    if #content == 1 and content.command == "sort" then
+      content = content[1]
+    end
+
     if #content ~= 1 or type(content[1]) ~= "string" then
       SU.error("Can't sort this object")
     end
