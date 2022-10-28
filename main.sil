@@ -1,8 +1,22 @@
-\begin[class=sixthworld]{document}
+\begin[class=sixthworld, papersize = a4]{document}
 
 \use[module=packages.lists]
 
 \language[main=pt]
+
+\define[command=chapter-style]{
+  \paint-frame[color = #181715]
+  \vcenter{\center{\font[size = 24pt]{\color[color=white]{\textbf{\uppercase{\process}}}}}}
+}
+
+\define[command=section-style]{\noindent
+  \font[size = 16pt]{\textbf{\uppercase{\process}}}
+  \par\fullrule
+}
+
+\define[command=subsection-style]{\noindent
+  \font[size = 12pt]{\textbf{\uppercase{\process}}}
+}
 
 \define[command=pre-key-aug]{\smallskip\textbf{\process{}:}}
 \define[command=post-key-aug]{\smallskip}
@@ -15,7 +29,7 @@
 \tableofcontents
 \indent
 
-% \chapter{Equipamento}
+\chapter{Equipamento}
 
 \section{Augs}
 
@@ -138,7 +152,7 @@ Bláblábláblá...
 
 \subsection{Rigger}
 
-% \chapter{Obstáculos}
+\chapter{Obstáculos}
 
 \section{ICE}
 
