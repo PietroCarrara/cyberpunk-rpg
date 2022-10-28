@@ -4,33 +4,49 @@
 
 \language[main=pt]
 
-\define[command=pre-key]{\textbf{\process{}:}}
+\define[command=pre-key-aug]{\smallskip\textbf{\process{}:}}
+\define[command=post-key-aug]{\smallskip}
+
+\define[command=pre-key-ice]{\smallskip\textbf{\process{}:}}
+
+\define[command=pre-key-ice-action]{→ }
+\define[command=post-key-ice-action]{ \textbf{(\process marcas)}}
 
 \tableofcontents
 \indent
+
+% \chapter{Equipamento}
 
 \section{Augs}
 
 \subsection{Audição}
 
-\begin[pre-key = pre-key, post-key = medskip]{sorted}
+\begin[type = aug]{sortedblock}
 
 \begin[key = Ouvidos Modulares]{item}
   Você pode desconectar seus ouvidos de sua cabeça, e elas continuam a transmitir o que ouvem para você os barulhos que capturam. Você pode ter cada ouvido em um lugar diferente e alternar de qual deles você está recebendo a transmissão de áudio. Se não estiver com nenhum ouvido conectado à sua cabeça, você perde totalmente seu senso de equilíbrio e não consegue sequer andar, tendo que ficar sentado ou imóvel até recuperar pelo menos um ouvido.
 \end{item}
 
-\end{sorted}
+\begin[key = Gravador]{item}
+  Permite que você armazene e transmita tudo que ouve. Aug comum em jornalistas.
+\end{item}
+
+\begin[key = Navegação Ultrassom]{item}
+  Seus ouvidos emitem pulsos ultrassônicos que rebatem em superfícies e são caputurados por receptores, permitindo que você “veja” na escuridão total. Você também detecta coisas que normalmente não veria, como pessoas sob efeito de um feitiço de invisibilidade.
+\end{item}
+
+\end{sortedblock}
 
 \subsection{Visão}
 
-\begin[pre-key = pre-key, post-key = medskip]{sorted}
+\begin[type = aug]{sortedblock}
 
 \begin[key = Duplicação de Retina]{item}
   Seus olhos podem escanear uma retina e replicá-la. Útil para sistemas de segurança que usam autenticação por retina. Você também pode enviar dados de alguma retina para que eles a repliquem, sem depender do scanner embutido.
 \end{item}
 
 \begin[key = Gravador]{item}
-  Seus olhos vêm equipados com câmeras que captam, armazenam e transmitem o que você está vendo. Modificação comum em cineastas amadores e streamers.
+  Seus olhos vêm equipados com câmeras que captam, armazenam e transmitem o que você está vendo. Aug comum em cineastas amadores e streamers.
 \end{item}
 
 \begin[key = Visão de Calor]{item}
@@ -45,6 +61,16 @@
   Sua visão pode aumentar seu fator de zoom para até 100x. Você pode perceber a olho nu falhas milimétricas na lapidação de uma joia, ou ler lábios refletidos na retina de alguém conversando do outro lado da rua.
 \end{item}
 
+\begin[key = Visão Noturna]{item}
+  Esta aug permite que você enxergue normalmente em condições com baixíssima iluminação (mas não ajuda em situações sem luz alguma).
+\end{item}
+
+\end{sortedblock}
+
+\subsection{Braços}
+
+\begin[type = aug]{sortedblock}
+
 \begin[key = Aim Assist]{item}
   Quando \textbf{Disparar em algum alvo}, com 7-9 você pode escolher outras opções:
   \begin{itemize}
@@ -53,11 +79,15 @@
   \end{itemize}
 \end{item}
 
-\end{sorted}
+\begin[key = Mãos Modulares]{item}
+  Esta aug altera suas mãos para que possam ser separadas de seus braços e contiuarem a operar. Você consegue controlá-las individualmente, e ainda sente tudo aquilo que tocam.
+\end{item}
 
-\subsection{Outros}
+\end{sortedblock}
 
-\begin[pre-key = pre-key, post-key = medskip]{sorted}
+\subsection{Corpo}
+
+\begin[type = aug]{sortedblock}
 
 \begin[key = Reflexos Implantados]{item}
   Quando \textbf{algum aliado rolar um 6-}, você pode descrever como tenta evitar que o teste falhe e perder 12 - o resultado da rolagem PVs. Se o fizer, role+CON. Com 10+, as consequências dessa falha são evitadas. Com 7-9, faça como 10+, mas escolha 1:
@@ -77,7 +107,57 @@
   \end{itemize}
 \end{item}
 
-\end{sorted}
+\begin[key = Pés Ancorados]{item}
+  Ferrões se extendem de seus pés e lhe garantem firmeza em sua posição. Quando \textbf{sofrer um empurrão ou tentarem te derrubar}, role+FOR. Com 7-9, escolha um:
+  \begin{itemize}
+    \item{Você se mantém firme, assim como seu adversário}
+    \item{Você cai, mas leva seu adversário junto}
+  \end{itemize}
+  Com 10+, você se mantém firme e escolhe um:
+  \begin{itemize}
+    \item{Você usa o peso de seu adversário para derrubá-lo}
+    \item{A manobra irresponsável de seu adversário lhe abre uma oportunidade: cause seu dano a ele}
+  \end{itemize}
+\end{item}
+
+\begin[key = Pernas Modulares]{item}
+  Você pode desconectar suas pernas de seu corpo e elas continuam funcionando, recebendo seus comandos e transmitindo a você tudo o que sentem. Elas caminham em uma espécie de “saltitar” e funcionam independentes uma da outra.
+\end{item}
+
+\end{sortedblock}
+
+\section{Armas}
+
+Bláblábláblá...
+
+\section{Itens}
+
+\subsection{Magician}
+
+\subsection{Razorgirl}
+
+\subsection{Rigger}
+
+% \chapter{Obstáculos}
+
+\section{ICE}
+
+\subsection{White Ice}
+
+ICE que pode ser encontrado em dispositivos pessoais.
+
+\begin[type = ice]{sortedblock}
+
+\begin[key = Farejador Light]{item}
+  Quando esse ICE é ativado, ele captura informações como endereço, ícone e dispositivo usados pelo intruso. Elas serão transmitidas em 24 horas para o dono desse ICE, junto de alguns anúncios oferecendo descontos em planos de segurança melhores.
+  \begin[type = ice-action]{sortedblock}
+    \item[key = 2]{Destruir as informações capturadas}
+  \end{sortedblock}
+\end{item}
+
+\end{sortedblock}
+
+\subsection{Blue Ice}
 
 % \showframe[id=all]
 

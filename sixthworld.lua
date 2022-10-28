@@ -64,8 +64,8 @@ function class:_init(options)
     stealFrom = { "content", "content_2", "divide" }
   })
 
-
   self:loadPackage('sorted')
+  self:loadPackage('commands')
 
   SILE.call('font', font(cooper('Medium'), '9pt'))
 
