@@ -4,6 +4,14 @@
 
 \language[main=pt]
 
+\define[command=alwaysindent]{
+  \set[parameter=current.parindent, reset=true]
+  \set[parameter=document.parindent, reset=true]
+}
+
+\define[command=project]{Simplerun}
+\define[command=dots]{...}
+
 \define[command=chapter-style]{
   \paint-frame[color = #181715]
   \vcenter{\center{\font[size = 24pt]{\color[color=white]{\textbf{\uppercase{\process}}}}}}
@@ -11,23 +19,66 @@
 
 \define[command=section-style]{\noindent
   \font[size = 16pt]{\textbf{\uppercase{\process}}}
-  \par\fullrule
+  \cr\fullrule
 }
 
 \define[command=subsection-style]{\noindent
   \font[size = 12pt]{\textbf{\uppercase{\process}}}
 }
 
-\define[command=pre-key-aug]{\smallskip\textbf{\process{}:}}
+\define[command=pre-key-aug]{\smallskip\textbf{\process{}: }\neverindent}
 \define[command=post-key-aug]{\smallskip}
 
-\define[command=pre-key-ice]{\smallskip\textbf{\process{}:}}
+\define[command=pre-key-ice]{\smallskip\textbf{\process{}: }}
 
 \define[command=pre-key-ice-action]{→ }
 \define[command=post-key-ice-action]{ \textbf{(\process marcas)}}
 
+\define[command=pre-key-tag]{• \textbf{\process{}: }}
+\define[command=post-key-tag]{\smallskip}
+
+\define[command=pre-key-item]{\textbf{\process{}: }}
+\define[command=post-key-item]{\smallskip}
+
 \tableofcontents
 \indent
+
+\chapter{O Mundo}
+
+\chapter{Regras}
+
+\section{Movimentos}
+
+\section{Flags}
+
+\section{Equipamento}
+
+\chapter{Playbooks}
+
+\section{Adept}
+
+\textbf{Dado de Dano:} d6
+
+\textbf{Vida:} 6+Constituição
+
+\textbf{Munição:} 2
+
+\subsection{Metatipos}
+
+\textbf{Elfo:} Seus reflexos aguçados lhe garantem +1 em testes de pilotagem.
+
+\textbf{Anão:} Você conhece cada rua e bairro da cidade: +1 em Estudos relacionados.
+
+\subsection{Movimentos Iniciais}
+
+\textbf{Reflexos Sobrenaturais:} Contanto que você esteja sem armadura e sua Carga seja Leve, você recebe Armadura 1.
+
+\textbf{Poderes de Adepto:} Você canaliza magia para melhorar suas habilidades físicas e pode ter até 2 poderes ativos simultaneamente. Quando fizer um teste onde seus poderes lhe auxiliam e rolar menos de 10, escolha um (exceto se os poderes ativos não possuírem dreno):
+\begin{itemize}
+  \item{Suas próximas X rolagens não poderão utilizar nenhum poder de adepto, onde X é o número de poderes ativos. Este efeito é cancelado após alguns minutos de descanso.}
+  \item{Sofra o dano de dreno de todos os poderes ativos rolagem.}
+\end{itemize}
+Em qualquer momento que você pudesse receber uma nova aug, você pode ao invés disso aprender um novo poder de adepto.
 
 \chapter{Equipamento}
 
@@ -142,15 +193,98 @@
 
 \section{Armas}
 
-Bláblábláblá...
+Armas em \project são um sistema muito simples, que favorece estilo sobre mecânicas. Elas podem ser \textbf{corpo a corpo} (facas, espadas, lanças\dots) ou \textbf{à distância} (pistolas, arcos, rifles\dots), e são descritas por \textit{tags}.
+
+Ao contrário de outros RPGs com regras mais complexas e detalhadas, as armas em \project não possuem informações mecânicas como dano, chance de acerto ou bônus em rolagens. Elas são descritas (na sua maioria) em termos de ficção, e cabe aos jogadores e ao mestre interpretar como essas descrições afetam as situações vividas pelas personagens. Alguém que tentasse sacar uma arma antes que um segurança possa reagir normalmente estaria \textbf{Desafiando o Perigo}. Isso pode não ser verdade se a personagem estiver usando uma arma \textit{ágil}, removendo a necessidade de se fazer um movimento (a ação simplesmente seria bem-sucedida, pois faz sentido dentro da ficção).
+
+Para criar uma arma, basta selecionar quantas tags forem solicitadas. A melhor maneira de fazer isso é, ao invés de pensar em \textit{qual} arma você está procurando, pensar \textit{no que} você gostaria que ela fizesse. Visualisar e descrever suas armas é mais fácil depois de saber quais tags elas possui.
+
+\neverindent
+
+\subsection{Tags Positivas}
+
+\begin[type = tag]{sortedblock}
+
+\item[key = Discreta]{Essa arma pode ser facilmente escondida.}
+
+\item[key = Desmontável]{Essa arma pode ser desmontada em peças menores e remontada depois.}
+
+\item[key = Imune à Detectores]{Detectores de metal não detectam essa arma.}
+
+\item[key = Longo Alcance]{Essa arma foi feita para acertar alvos de longas distâncias.}
+
+\item[key = Estraçalhadora]{Causa +2 de dano. \textbf{Pré-requisitos:} Barulhenta}
+
+\item[key = Licença de Uso]{Você possui a licença apropriada para essa arma.}
+
+\item[key = Ágil]{Sacar e manusear essa arma é uma ação fácil e rápida.}
+
+\item[key = Permissão do Dono]{Essa arma só funciona quando detectar que você é quem a está usando.}
+
+\item[key = Munição Alternativa]{Essa arma pode disparar, além de sua munição normal, dardos de injeção com uma dose de alguma droga ou toxina.}
+
+\end{sortedblock}
+
+\subsection{Tags Positivas (À Distância)}
+\begin[type = tag]{sortedblock}
+  \item[key = Automática]{Essa arma dispara vários projéteis consecutivos.}
+
+  \item[key = Medidor de Distância]{Essa arma é capaz de medir a distância até seu alvo.}
+
+  \item[key = Silenciosa]{Essa arma quase não faz barulho ao ser disparada.}
+\end{sortedblock}
+
+\subsection{Tags Negativas}
+
+\begin[type = tag]{sortedblock}
+
+\item[key = Barulhenta]{Essa arma é especialmente barulhenta quando usada.}
+
+\item[key = Desajeitada]{Essa arma é difícil e lenta de se sacar ou manusear.}
+
+\item[key = Óbvia]{Não é possível de se esconder essa arma.}
+
+\item[key = Ilegal]{Essa arma é ilegal e portá-la pode lhe trazer problemas com autoridades.}
+
+\end{sortedblock}
+
+\alwaysindent
 
 \section{Itens}
 
+\begin[type = item]{sortedblock}
+  \item[key = Arma Corpo a Corpo]{}
+  \item[key = Arma à Distância]{}
+  \item[key = Munição Extra]{}
+  \item[key = Colete]{}
+  \item[key = Chip de Software Ilegal]{}
+  \item[key = Ferramentas Simples]{}
+  \item[key = Ferramentas de Demolição]{}
+\end{sortedblock}
+
 \subsection{Magician}
+
+\begin[type = item]{sortedblock}
+  \item[key = Item Mágico Menor]{Um item mágico simples e pouco poderoso, como uma poção que cure 1d3+1 PVs, um bolo que encanta quem o come a ir no banheiro, ou qualquer item tão poderoso quanto. Cada uso lhe fornece um item diferente. \textit{2 Usos, Peso 1.}}
+  \item[key = Item Mágico Maior]{Um item mágico poderoso, como uma poção que cura 1d10+4 PVs, uma mochila mágica com Inventário 3, ou outro item tão poderoso quanto. \textit{Peso 2.}}
+  \item[key = Rumores dos Espíritos da Área]{Você conversou com espíritos curiosos da área e eles lhe contaram o que têm visto nos últimos dias. Diga sobre o que vocês conversaram e o mestre lhe dará informações úteis sobre o assunto. \textit{Peso 1.}}
+\end{sortedblock}
 
 \subsection{Razorgirl}
 
+\begin[type = item]{sortedblock}
+  \item[key = Algemas e Mordaças]{}
+  \item[key = Ferramentas de Escalada]{}
+  \item[key = Material de Chantagem]{}
+\end{sortedblock}
+
 \subsection{Rigger}
+
+\begin[type = item]{sortedblock}
+  \item[key = Bloqueador de Sinal]{}
+  \item[key = Chip com IA Avançada]{}
+  \item[key = Material de Chantagem]{}
+\end{sortedblock}
 
 \chapter{Obstáculos}
 
@@ -158,11 +292,11 @@ Bláblábláblá...
 
 \subsection{White Ice}
 
-ICE que pode ser encontrado em dispositivos pessoais.
+ICE que pode ser encontrado em dispositivos pessoais. Seu celular provavelmente veio da fábrica rodando um desses daqui.
 
 \begin[type = ice]{sortedblock}
 
-\begin[key = Farejador Light]{item}
+\begin[key = Watcher Light]{item}
   Quando esse ICE é ativado, ele captura informações como endereço, ícone e dispositivo usados pelo intruso. Elas serão transmitidas em 24 horas para o dono desse ICE, junto de alguns anúncios oferecendo descontos em planos de segurança melhores.
   \begin[type = ice-action]{sortedblock}
     \item[key = 2]{Destruir as informações capturadas}

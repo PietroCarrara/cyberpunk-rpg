@@ -144,23 +144,25 @@ function package:registerCommands()
 
     SILE.typesetter:leaveHmode()
     for i = 1, #items do
-      if options['pre-key'] then
-        SILE.call(options['pre-key'], items[i], { items[i].key })
-      end
-      if options['pre-content'] then
-        SILE.call(options['pre-content'], items[i], items[i].content)
-      end
+      SILE.settings:temporarily(function ()
+        if options['pre-key'] then
+          SILE.call(options['pre-key'], items[i], { items[i].key })
+        end
+        if options['pre-content'] then
+          SILE.call(options['pre-content'], items[i], items[i].content)
+        end
 
-      SILE.process(items[i].content)
+        SILE.process(items[i].content)
 
-      if options['post-content'] then
-        SILE.call(options['post-content'], items[i], items[i].content)
-      end
-      if options['post-key'] then
-        SILE.call(options['post-key'], items[i], { items[i].key })
-      end
+        if options['post-content'] then
+          SILE.call(options['post-content'], items[i], items[i].content)
+        end
+        if options['post-key'] then
+          SILE.call(options['post-key'], items[i], { items[i].key })
+        end
 
-      SILE.typesetter:leaveHmode()
+        SILE.typesetter:leaveHmode()
+      end)
     end
   end)
 end
